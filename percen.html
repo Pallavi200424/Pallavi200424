@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        .father{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+
+        }
+        .son{
+            background-color: rgb(129, 42, 211);
+            padding: 30px;
+            border: 2px solid rgb(169, 73, 201);
+            border-radius: 10px;
+
+        }
+       label{
+        color: beige;
+       }
+       input{
+        padding: 5px 10px;
+        font-size: 20px;
+        margin-top: 5px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        margin-bottom: 5px;
+
+       }
+       h1{
+        margin-bottom: 20px;
+
+       }
+       h1,
+       h2{
+        text-align: center;
+        color: bisque;
+       }
+       
+       
+
+    </style>
+</head>
+<body>
+    <div class="father">
+
+        <div class="son">
+
+            <h1>Calculate percentage</h1>
+            <label for="">Enter total marks</label><br>
+            <input type="text" placeholder="Number" id="no1"><br>
+            <label for="">Enter total number of subjects</label><br>
+            <input type="text" placeholder="Number" id="no2"><br>
+            <input type="submit"value="Calculate" placeholder="calc" onclick="Modkar()"><br>
+
+            <h2 id="res">Result</h2>
+        </div>
+    </div>
+    <script>
+        function Modkar(){
+            var a= parseInt(document.getElementById('no1').value);
+            var b= parseInt(document.getElementById('no2').value);
+
+            var c= a/b;
+            document.getElementById("res").innerHTML="Result="+c+"%";
+        }
+    </script>
+</body>
+</html>
